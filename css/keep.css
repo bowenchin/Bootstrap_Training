@@ -1,0 +1,148 @@
+.navbar-background {
+  background-color: white;
+  box-shadow: 1px 1px 1px #888888;
+}
+
+#brand {
+  color: lightseagreen;
+}
+
+#sign-up {
+  border: 2px solid #0099cc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#sign-up:hover {
+  background: #0099cc;
+  color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glyphicon-ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid black;
+  color: white;
+  display: inline-table;
+  text-align: center;
+}
+
+.glyphicon-ring .glyphicon-bordered {
+  font-size: 5em;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.keep-search:hover {
+  background: orange;
+  color: white;
+}
+
+.nav a {
+  font-weight: bold;
+}
+
+.jumbotron {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 140px 30px;
+  font-weight: bold;
+}
+
+.title {
+  color: white;
+}
+
+.row {
+  display: block;
+}
+
+.what-section {
+  background-color: #9ee1e8;
+  padding: 3em;
+}
+
+.what-graphics {
+  max-height: 30rem;
+}
+
+.what-block-text {
+  padding: 30px;
+  margin-top: 10px;
+  background-color: #fff;
+  display: block;
+}
+
+.product-section {
+  background-color: white;
+  padding: 5em;
+}
+
+.keep-fam {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.keep-search {
+  color: orange;
+  border-color: orange;
+}
+
+.keep-cat {
+  color: purple;
+  border-color: purple;
+}
+
+.keep-course {
+  color: cornflowerblue;
+  border-color: cornflowerblue;
+}
+
+.keep-poll {
+  color: lightgreen;
+  border-color: lightgreen;
+}
+
+.learn-more-btn {
+  font-weight: bold;
+  width: 100px;
+}
+
+.testimonial-section {
+  background-color: #9ee1e8;
+  padding: 5em;
+}
+
+.footer-section {
+  background-color: #F6F6F6;
+  padding: 2em;
+}
+
+.testimonial-img {
+  position: absolute;
+  top: -.75em;
+  bottom: 0em;
+  height: 200px;
+}
+
+.testimonial-img-left {
+  left: 5vw;
+}
+
+.footer-links {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 991px) {
+  .footer-links {
+    text-align: left;
+  }
+}
