@@ -85,27 +85,55 @@
 
     </div>
   </div>
+  <script>
+    function validateContactForm(){
+      var name = document.forms["contactForm"]["sname"].value;
+      var email = document.forms["contactForm"]["semail"].value;
+      var msg = document.forms["contactForm"]["smsg"].value;
 
+      var form_name = document.getElementById("name");
+      var form_email = document.getElementById("email");
+      var form_message = document.getElementById("message");
+
+
+      if(name == ""){
+        alert("You must fill out your name.");
+        form_name.classList.add("has-error");
+        return false;
+      }
+      if(email == ""){
+        alert("You must fill out your email.");
+        form_email.className += "has-error";
+        return false;
+      }
+      if(msg == ""){
+        alert("You must input your message.");
+        form_message.className += "has-error";
+        return false;
+      }
+    }
+
+  </script>
   <div id="form">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <h2>Contact Me</h2>
-          <form>
-            <div class="form-group">
+          <form name = contactForm>
+            <div id="name" class="form-group">
               <label for="senderName">Name</label>
-              <input type="email" class="form-control" id="senderName" placeholder="Name">
+              <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name">
             </div>
-            <div class="form-group">
+            <div id="email" class="form-group email">
               <label for="senderEmail">Email address</label>
-              <input type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
             </div>
-            <div class="form-group">
+            <div id="message" class="form-group message">
               <label for="senderMessage">Message</label>
-              <textarea class="form-control" rows="3" id="senderMessage" placeholder="Message"></textarea>
+              <textarea name="smsg" type="test" class="form-control" rows="3" id="senderMessage" placeholder="Message"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Send</button>
+            <button onclick="validateContactForm()"type="submit" class="btn btn-primary">Send</button>
           </form>
         </div>
       </div>
