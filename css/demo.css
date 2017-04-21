@@ -1,0 +1,32 @@
+.jumbotron{
+  background-color: #74E5D1;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-bottom: 0;
+}
+
+.secondary-color{
+  color:#39ccb1;
+}
+
+#name:hover{
+  -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+  color:black;
+}
+
+#self{
+  padding:3em;
+}
+
+#ajax{
+  background-color: #EEEEEE;
+  height: 20em;
+}
+
+#form{
+  height: 20em;
+
+}
