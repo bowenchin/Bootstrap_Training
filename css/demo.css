@@ -5,6 +5,17 @@
   margin-bottom: 0;
 }
 
+.btn-primary{
+  background-color: #39ccb1;
+  border-color: #39ccb1;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .secondary-color{
   color:#39ccb1;
 }
@@ -23,10 +34,17 @@
 
 #ajax{
   background-color: #EEEEEE;
-  height: 20em;
 }
 
 #form{
   height: 20em;
+  padding: 20px;
+}
 
+body{
+   margin-bottom: 10em;
+}
+
+#content{
+  padding:30px;
 }

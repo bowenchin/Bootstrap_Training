@@ -18,64 +18,100 @@
     </p>
   </div>
 
-<div id="self">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <h3 class = "secondary-color">Origin</h3>
-        <p>
-          I grew up in Malaysia until the age of 9.
-        </p>
-        <p>
-          I then moved to Tianjin China and lived there till I was 18 years old.
-        </p>
-      </div>
+  <div id="self">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3 class="secondary-color">Origin</h3>
+          <p>
+            I grew up in Malaysia until the age of 9.
+          </p>
+          <p>
+            I then moved to Tianjin China and lived there till I was 18 years old.
+          </p>
+        </div>
 
-      <div class="col-sm-4">
-        <h3 class = "secondary-color">Passion</h3>
-        <p>
-          I am passionate about technology, especially technology that is used to transform lives.
-        </p>
-        <p>
-          Passionate about engineering, web development, mobile development, UI/UX design, and photography.
-        </p>
-      </div>
+        <div class="col-sm-4">
+          <h3 class="secondary-color">Passion</h3>
+          <p>
+            I am passionate about technology, especially technology that is used to transform lives.
+          </p>
+          <p>
+            Passionate about engineering, web development, mobile development, UI/UX design, and photography.
+          </p>
+        </div>
 
-      <div class="col-sm-4">
-        <h3 class = "secondary-color">Future</h3>
-        <p>
-          Immediate future: I wish to experience a lot from this internship.
-        </p>
-        <p>
-          Distant future: To go to grad school or work in the industry.
-        </p>
+        <div class="col-sm-4">
+          <h3 class="secondary-color">Future</h3>
+          <p>
+            Immediate future: I wish to experience a lot from this internship.
+          </p>
+          <p>
+            Distant future: To go to grad school or work in the industry.
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="ajax">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 center-block center">
-        <h1>Ajax</h1>
+  <script>
+  $(document).ready(function(){
+      $("#btn-resume").click(function(){
+          $("#content").load("asset/demo/resume.txt");
+          $(".content-title").html("My resume")
+      });
+      $("#btn-course").click(function(){
+          $("#content").load("asset/demo/courses.txt");
+          $(".content-title").html("Courses that I am taking")
+      });
+  });
+  </script>
+  <div id="ajax">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text-center">
+          <h2 class="content-title">Learn more about me!</h2>
+          <p>click on the button below to see more...</p>
+          <div class="center">
+            <button id="btn-resume" type="resume" class="btn btn-default">Resume</button>
+            <button id="btn-course" type="schedule" class="btn btn-default ">Course Schedule</button>
+          </div>
+
+          <div id="content" class="text-left"></div>
+
+
+        </div>
       </div>
+
     </div>
-
   </div>
-</div>
 
-<div id="form">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 center-block center">
-        <h1>Form</h1>
+  <div id="form">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2>Contact Me</h2>
+          <form>
+            <div class="form-group">
+              <label for="senderName">Name</label>
+              <input type="email" class="form-control" id="senderName" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="senderEmail">Email address</label>
+              <input type="email" class="form-control" id="senderEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="senderMessage">Message</label>
+              <textarea class="form-control" rows="3" id="senderMessage" placeholder="Message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
       </div>
+
     </div>
-
   </div>
-</div>
-
 
 
 </body>

@@ -1,0 +1,9 @@
+<ul>
+<li>ELTU 3014 - English for ERG Studs II</li>
+<li>GEWS 1000 - College Assembly/High Table</li>
+<li>SEEM 3490 - Information Systems Management</li>
+<li>SEEM 3510 - Human-computer Interaction</li>
+<li>SEEM 3550 - Fundamentals in Info Syst</li>
+<li>SEEM 4540 - Open Systems for E-Commerce</li>
+<li>UGED 2133 - Music in Film</li>
+</ul>
