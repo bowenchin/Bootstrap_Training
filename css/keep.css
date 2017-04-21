@@ -3,8 +3,35 @@
   box-shadow: 1px 1px 1px #888888;
 }
 
-.container-narrow{
-  max-width: 75%;
+#brand{
+  color:teal;
+}
+
+#sign-up {
+	border: 2px solid #0099cc;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+#sign-up:hover {
+	background: #0099cc;
+  color:white;
+}
+
+#product-icon {
+  -webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+width:150px;
+height:150px;
+border-style:solid;
+border-width:3px;
+border-color:orange;
+}
+
+#product-icon:hover {
+	background: orange;
+  color:white;
 }
 
 .nav a{
@@ -46,15 +73,72 @@
 
 .product-section{
   background-color: white;
-  padding: 3em;
+  padding: 5em;
+}
+
+.product-icon{
+  border-radius: 100%;
+  	width: 130px;
+      height: 130px;
+      margin: auto;
+      cursor: pointer;
+}
+
+.glyp-products{
+  font-size:5em;
+}
+
+.keep-fam{
+  margin-top:25px;
+  margin-bottom: 25px;
+}
+
+.keep-search{
+  color:orange;
+}
+
+.keep-cat{
+  color:purple;
+}
+
+.keep-course{
+  color:cornflowerblue;
+}
+
+.keep-poll{
+  color:lightgreen;
+}
+
+.learn-more-btn{
+  font-weight: bold;
+  width:50%;
 }
 
 .testimonial-section{
   background-color: #9ee1e8;
-  padding: 3em;
+  padding: 5em;
 }
 
 .footer-section{
   background-color: #F6F6F6;
-  padding: 3em;
+  padding: 2em;
+}
+
+.testimonial-img {
+  position: absolute;
+  top:-.75em;
+  bottom: 0em;
+  height: 200px;
+}
+
+.testimonial-img-left { left: 5vw; }
+
+.footer-links{
+  text-align: right;
+}
+
+@media screen and (min-width: 990px) {
+  .footer-links{
+    text-align: left;
+  }
 }
