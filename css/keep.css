@@ -18,6 +18,32 @@
   color: white;
 }
 
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+}
+
 .center {
   display: flex;
   justify-content: center;
