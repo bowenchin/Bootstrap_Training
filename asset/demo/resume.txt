@@ -1,0 +1,21 @@
+<h2>CHIN Bo Wen</h2>
+<p>Room 610, 6/F, North Block, Lee Woo Sing College, CUHK, Sha Tin, Hong Kong</p>
+</p>Contact Number: +852 56235545 E-mail: chin.bowen@gmail.com</p>
+
+<p>Education THE CHINESE UNIVERSITY OF HONG KONG Hong Kong Bachelor of Engineering in Systems Engineering and Engineering Management Sep 2014 &ndash; July 2018 &bull; GPA: 3.516/4.00 Expected graduation: July 2018 &bull; Relevant Coursework: E-Commerce Data Mining, Engineering Innovation &amp; Entrepreneurship, Operations Research, Systems Simulation, Discrete Mathematics, Data Structure, Service Management</p>
+
+<p>Work Experience AHSAY SYSTEMS CORPORATION Hong Kong Customer Support Engineer Intern Jun 2016 &ndash; Aug 2016 &bull; Analyzed and evaluated company&rsquo;s current software product offerings and core features &bull; Responded to clients&rsquo; inquiries and issues with appropriate resolutions and maintained customer satisfaction &bull; Exceeded monthly targets in delivering outstanding service by 75%, thereby increasing team&rsquo;s efficiency &bull; Collaborated with development team to improve software usability by reporting bugs and feature requests</p>
+
+<p>faculty of engineering, cuhk Hong Kong Summer Research Intern May 2015 &ndash; Sep 2015 &bull; Developed an innovative smart motion-capture wearable system with multi-disciplinary research team &bull; Improved product usability and fabricated hardware design using CAD and 3D printing &bull; Achieved great results in multiple technological competitions such as the Challenge Cup (&#25361;&#25136;&#30403;) and Huawei Cup</p>
+
+<p>Projects YouMatter: a social mobile application to promote mental health and suicide prevention &bull; Developed an Android app to promote personal mental-health and connect at-risk peers with counsellors &bull; Managed the development team by outlining product strategy and functional requirements &bull; Designed the user-interface that adheres to Google&rsquo;s Material Design with emphasis on user-friendliness &bull; Secured funding of $50,000 from HKU to promote-suicide prevention awareness on university campuses</p>
+
+<p>UnI: a social network from idea to pitching &bull; Conceptualized a social network mobile application to promote social interaction and event promotion &bull; Fabricated the user-interface of the application and core features (view at https://goo.gl/ReLXoE) &bull; Prepared and pitched a proposal and presented the idea to various industry experts</p>
+
+<p>Material Tasks: a simple to-do list Android application &bull; Developed a simple to-do list mobile app with over 600 downloads that helps users manage their tasks &bull; Designed the user-interface following Google&rsquo;s Material Design guidelines &bull; Created a responsive website to showcase the app&rsquo;s features (http://bowenchin.com/MaterialTasks-website/)</p>
+
+<p>bowenchin.com Personal Website &bull; Designed and developed a responsive personal website using HTML and CSS &bull; Established online web presence and increased knowledge in web design and web development</p>
+
+<p>Honours and awards Dean&rsquo;s List, 2015-2016 Ahsay Backup Scholarship - the scholarship aims to reward outstanding students in the field of engineering Huawei Cup Intelligence Design Contest for University Students - Champion 14th Challenge Cup National Undergraduate Curricular Academic Science and Technology Contest - First Prize Ti Hua KOO and Dorothy VEE KOO Admission Scholarship for International Students; Honours at Entrance</p>
+
+<p>Skills Language: English (native proficiency), Mandarin (professional proficiency), Cantonese (intermediate proficiency) Software: Proficient in Adobe Photoshop, Adobe InDesign, Sketch, Office Word, PowerPoint, Excel Programming Languages: HTML, CSS, Java, C, UNIX, SQL </p>
