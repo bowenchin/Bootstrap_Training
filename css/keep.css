@@ -1,0 +1,60 @@
+.navbar-background{
+  background-color: white;
+  box-shadow: 1px 1px 1px #888888;
+}
+
+.container-narrow{
+  max-width: 75%;
+}
+
+.nav a{
+	font-weight: bold;
+}
+
+.jumbotron {
+	margin-top: 0px;
+  margin-bottom: 0px;
+	padding: 140px 30px;
+  font-weight: bold;
+}
+
+.title{
+  color: white;
+}
+
+
+
+.row{
+  display: block;
+}
+
+.what-section{
+  background-color: #9ee1e8;
+  padding: 3em;
+}
+
+.what-graphics{
+  max-height: 30rem;
+}
+
+.what-block-text{
+  padding: 30px;
+	margin-top: 10px;
+	background-color: #fff;
+	display: block;
+}
+
+.product-section{
+  background-color: white;
+  padding: 3em;
+}
+
+.testimonial-section{
+  background-color: #9ee1e8;
+  padding: 3em;
+}
+
+.footer-section{
+  background-color: #F6F6F6;
+  padding: 3em;
+}
