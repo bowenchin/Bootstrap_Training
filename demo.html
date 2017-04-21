@@ -55,30 +55,31 @@
   </div>
 
   <script>
-  $(document).ready(function(){
-      $("#btn-resume").click(function(){
-          $("#content").load("asset/demo/resume.txt");
-          $(".content-title").html("My resume")
+    $(document).ready(function() {
+      $("#btn-resume").click(function() {
+        $("#content").removeClass("hidden");
+        $("#content").load("asset/demo/resume.txt");
+        $(".content-title").html("My resume")
       });
-      $("#btn-course").click(function(){
-          $("#content").load("asset/demo/courses.txt");
-          $(".content-title").html("Courses that I am taking")
+      $("#btn-course").click(function() {
+        $("#content").removeClass("hidden");
+        $("#content").load("asset/demo/courses.txt");
+        $(".content-title").html("Courses that I am taking")
       });
-  });
+    });
   </script>
-  <div id="ajax">
+  <div id="ajax" class="center-block">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
-          <h2 class="content-title">Learn more about me!</h2>
+          <h2 class="content-title secondary-color">Learn more about me!</h2>
           <p>click on the button below to see more...</p>
           <div class="center">
             <button id="btn-resume" type="resume" class="btn btn-default">Resume</button>
             <button id="btn-course" type="schedule" class="btn btn-default ">Course Schedule</button>
           </div>
 
-          <div id="content" class="text-left"></div>
-
+          <div id="content" class="card text-left hidden"></div>
 
         </div>
       </div>
@@ -86,55 +87,66 @@
     </div>
   </div>
   <script>
-    function validateContactForm(){
+    function validateContactForm() {
       var name = document.forms["contactForm"]["sname"].value;
       var email = document.forms["contactForm"]["semail"].value;
       var msg = document.forms["contactForm"]["smsg"].value;
 
-      var form_name = document.getElementById("name");
-      var form_email = document.getElementById("email");
-      var form_message = document.getElementById("message");
+      var bool = true;
 
-
-      if(name == ""){
-        alert("You must fill out your name.");
-        form_name.classList.add("has-error");
-        return false;
+      if (name == "") {
+        document.getElementById("alert-name").classList.remove("hide");
+        document.getElementById("sname").classList.add("has-error");
+        bool = false;
       }
-      if(email == ""){
-        alert("You must fill out your email.");
-        form_email.className += "has-error";
-        return false;
+      if (email == "") {
+        document.getElementById("alert-email").classList.remove("hide");
+        document.getElementById("semail").classList.add("has-error");
+        bool = false;
       }
-      if(msg == ""){
-        alert("You must input your message.");
-        form_message.className += "has-error";
+      if (msg == "") {
+        document.getElementById("alert-msg").classList.remove("hide");
+        document.getElementById("smsg").classList.add("has-error");
+        bool = false;
+      }
+      if (!bool) {
+        document.getElementById("submit-btn").classList.add("disabled");
         return false;
+      } else if (bool) {
+        document.getElementById("confirmed-sent").classList.remove("hide");
+        return true;
       }
     }
-
   </script>
   <div id="form">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <h2>Contact Me</h2>
-          <form name = contactForm>
-            <div id="name" class="form-group">
+          <form name="contactForm" onsubmit="return validateContactForm();">
+            <div id="sname" class="form-group">
               <label for="senderName">Name</label>
-              <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name">
+              <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name"><br/>
+              <div id="alert-name" class="alert alert-danger alert-name hide"><strong>Alert: </strong>Please fill in your name...</div>
             </div>
-            <div id="email" class="form-group email">
+            <div id="semail" class="form-group">
               <label for="senderEmail">Email address</label>
-              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email"><br/>
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
             </div>
-            <div id="message" class="form-group message">
+            <div id="smessage" class="form-group">
               <label for="senderMessage">Message</label>
-              <textarea name="smsg" type="test" class="form-control" rows="3" id="senderMessage" placeholder="Message"></textarea>
+              <textarea name="smsg" type="test" class="form-control" rows="3" id="senderMessage" placeholder="Message"></textarea><br/>
+              <div id="alert-msg" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your message...</div>
             </div>
 
-            <button onclick="validateContactForm()"type="submit" class="btn btn-primary">Send</button>
-          </form>
+            <button id="submit-btn" type="submit" class="btn btn-primary">Send</button>
+          </form><br/>
+
+          <div id="confirm-sent" class="alert alert-success hide">
+            <strong>Success!</strong> Your message has been sent.
+          </div>
+
         </div>
       </div>
 
