@@ -5,7 +5,7 @@ Repo showcasing demo for GIT version control, Bootstrap, Javascript training.
 2. Demo page with personal information
 
 Week 1: Git Version Control
-[checkbox:checked] Set up a Git repository
+# [checkbox:checked] Set up a Git repository
 [checkbox:checked] Create a commit in that Git repository
 [checkbox:checked] Demonstrate that you can collaborate with others using Git
 
