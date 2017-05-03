@@ -68,8 +68,8 @@
       });
     });
   </script>
-  <div id="ajax" class="center-block">
     <div class="container">
+      <div id="ajax" class="center-block">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
           <h2 class="content-title secondary-color">Learn more about me!</h2>
@@ -94,6 +94,8 @@
 
       var bool = true;
 
+      document.getElementById("confirm-sent").classList.add("hide");
+
       if (name == "") {
         document.getElementById("alert-name").classList.remove("hide");
         document.getElementById("sname").classList.add("has-error");
@@ -106,24 +108,44 @@
       }
       if (msg == "") {
         document.getElementById("alert-msg").classList.remove("hide");
-        document.getElementById("smsg").classList.add("has-error");
+        document.getElementById("smessage").classList.add("has-error");
         bool = false;
       }
-      if (!bool) {
-        document.getElementById("submit-btn").classList.add("disabled");
+      if (bool==false) {
+        //document.getElementById("submit-btn").classList.add("disabled");
         return false;
       } else if (bool) {
-        document.getElementById("confirmed-sent").classList.remove("hide");
+        document.getElementById("confirm-sent").classList.remove("hide");
+
+        document.getElementById("submit-btn").classList.remove("disabled");
+
+
+        document.getElementById("alert-name").classList.add("hide");
+        document.getElementById("alert-email").classList.add("hide");
+        document.getElementById("alert-msg").classList.add("hide");
+
+        document.getElementById("sname").classList.remove("has-error");
+        document.getElementById("semail").classList.remove("has-error");
+        document.getElementById("smessage").classList.remove("has-error");
+
+        setTimeout("resetForm()", 1500); // set timout
+
         return true;
       }
     }
+
+    function resetForm(){
+      document.getElementById("contactForm").reset();
+      document.getElementById("confirm-sent").classList.add("hide");
+    }
   </script>
+
   <div id="form">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <h2>Contact Me</h2>
-          <form name="contactForm" onsubmit="return validateContactForm();">
+          <form id="contactForm" name="contactForm"  action=javascript:void(0)" onsubmit="return validateContactForm()">
             <div id="sname" class="form-group">
               <label for="senderName">Name</label>
               <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name"><br/>
@@ -136,7 +158,7 @@
             </div>
             <div id="smessage" class="form-group">
               <label for="senderMessage">Message</label>
-              <textarea name="smsg" type="test" class="form-control" rows="3" id="senderMessage" placeholder="Message"></textarea><br/>
+              <textarea name="smsg" type="text" class="form-control" rows="3" id="senderMessage" placeholder="Message"></textarea><br/>
               <div id="alert-msg" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your message...</div>
             </div>
 
