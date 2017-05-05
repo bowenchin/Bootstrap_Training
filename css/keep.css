@@ -66,49 +66,8 @@
   display: table-cell;
 }
 
-
-.keep-fam {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.keep-search {
-  color: orange;
-  border-color: orange;
-}
-
-.keep-cat {
-  color: purple;
-  border-color: purple;
-}
-
-.keep-course {
-  color: cornflowerblue;
-  border-color: cornflowerblue;
-}
-
-.keep-poll {
-  color: lightgreen;
-  border-color: lightgreen;
-}
-
-.ring-search:hover {
+.keep-search:hover {
   background: orange;
-  color: white;
-}
-
-.ring-cat:hover {
-  background: purple;
-  color: white;
-}
-
-.ring-course:hover {
-  background: cornflowerblue;
-  color: white;
-}
-
-.ring-poll:hover {
-  background: lightgreen;
   color: white;
 }
 
@@ -151,6 +110,31 @@
 .product-section {
   background-color: white;
   padding: 5em;
+}
+
+.keep-fam {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.keep-search {
+  color: orange;
+  border-color: orange;
+}
+
+.keep-cat {
+  color: purple;
+  border-color: purple;
+}
+
+.keep-course {
+  color: cornflowerblue;
+  border-color: cornflowerblue;
+}
+
+.keep-poll {
+  color: lightgreen;
+  border-color: lightgreen;
 }
 
 .learn-more-btn {
