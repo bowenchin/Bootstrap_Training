@@ -45,7 +45,7 @@
 
 <body>
   <script>
-    function validateSignUp() {
+    function validateContactForm() {
       var name = document.forms["contactForm"]["sname"].value;
       var email = document.forms["contactForm"]["semail"].value;
       var msg = document.forms["contactForm"]["smsg"].value;
@@ -69,7 +69,7 @@
         document.getElementById("smessage").classList.add("has-error");
         bool = false;
       }
-      if (bool == false) {
+      if (bool==false) {
         //document.getElementById("submit-btn").classList.add("disabled");
         return false;
       } else if (bool) {
@@ -92,8 +92,8 @@
       }
     }
 
-    function resetForm() {
-      document.getElementById("signUpForm").reset();
+    function resetForm(){
+      document.getElementById("contactForm").reset();
       document.getElementById("confirm-sent").classList.add("hide");
     }
   </script>
@@ -101,30 +101,138 @@
   <div id="form">
     <div class="container">
       <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <h2>Sign Up</h2>
-          <form id="signUpForm" name="contactForm" action=javascript:void(0) onsubmit="return validateSignUp()">
-            <div id="sname " class="form-group ">
-              <label for="senderName">Name</label>
-              <input name="sname " type="text " class="form-control " id="senderName " placeholder="Name "><br/>
-              <div id="alert-name " class="alert alert-danger alert-name hide "><strong>Alert: </strong>Please fill in your name...</div>
-            </div>
-            <div id="semail " class="form-group ">
-              <label for="senderEmail">Email address</label>
-              <input name="semail" type="email " class="form-control " id="senderEmail " placeholder="Email "><br/>
-              <div id="alert-email" class="alert alert-danger hide "><strong>Alert: </strong>Please fill in your email...</div>
-            </div>
-            <div id="smessage " class="form-group ">
-              <label for="senderMessage ">Message</label>
-              <textarea name="smsg" type="text " class="form-control " rows="3 " id="senderMessage " placeholder="Message "></textarea><br/>
-              <div id="alert-msg" class="alert alert-danger hide "><strong>Alert: </strong>Please fill in your message...</div>
+        <div class="col-sm-8 col-centered">
+          <h1>Sign Up</h1>
+          <form id="contactForm" name="contactForm" action=javascript:void(0) onsubmit="return validateContactForm()">
+
+<div id="personal-info" class="card">
+  <h3>Personal Information</h3>
+
+<!-- Required! -->
+  <div id="sname" class="form-group">
+    <label for="senderName">Salutation</label>
+    <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name">
+    <div id="alert-name" class="alert alert-danger alert-name hide"><strong>Alert: </strong>Please fill in your name...</div>
+  </div>
+
+<!-- Required! -->
+  <div id="sname" class="form-group">
+    <label for="senderName">Given Name</label>
+    <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name">
+    <div id="alert-name" class="alert alert-danger alert-name hide"><strong>Alert: </strong>Please fill in your name...</div>
+  </div>
+
+<!-- Required! -->
+  <div id="sname" class="form-group">
+    <label for="senderName">Surname</label>
+    <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name">
+    <div id="alert-name" class="alert alert-danger alert-name hide"><strong>Alert: </strong>Please fill in your name...</div>
+  </div>
+
+<!-- Required! -->
+  <div id="sname" class="form-group">
+    <label for="senderName">Affiliation Name</label>
+    <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name">
+    <div id="alert-name" class="alert alert-danger alert-name hide"><strong>Alert: </strong>Please fill in your name...</div>
+  </div>
+
+<!-- Required! -->
+  <div id="sname" class="form-group">
+    <label for="senderName">Job title/position</label>
+    <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name">
+    <div id="alert-name" class="alert alert-danger alert-name hide"><strong>Alert: </strong>Please fill in your name...</div>
+  </div>
+</div>
+
+
+            <h3>Account Information</h3>
+<!-- Required! -->
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Email Address</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
             </div>
 
-            <button id="submit-btn" type="submit " class="btn btn-primary ">Sign Up</button>
+<!-- Required! -->
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Retype Email Address</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+<!-- Required! -->
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Password</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+<!-- Required! -->
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Retype Password</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+            <h3>Contact Information</h3>
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Phone Number</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Fax Number</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Website</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+<!-- Required! -->
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Address</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+<!-- Required! -->
+            <div id="semail" class="form-group">
+              <label for="senderEmail">City</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+            <div id="semail" class="form-group">
+              <label for="senderEmail">State/Province</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Zip/Postal Code</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+<!-- Required! -->
+            <div id="semail" class="form-group">
+              <label for="senderEmail">Region</label>
+              <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Email">
+              <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your email...</div>
+            </div>
+
+
+            <button id="submit-btn" type="submit" class="btn btn-primary">Sign Up</button>
           </form><br/>
 
-          <div id="confirm-sent" class="alert alert-success hide ">
-              <strong>Success!</strong> Your account has been created.
+          <div id="confirm-sent" class="alert alert-success hide">
+            <strong>Success!</strong> Your message has been sent.
           </div>
 
         </div>
@@ -132,6 +240,8 @@
 
     </div>
   </div>
+
+
 </body>
 
 </html>

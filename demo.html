@@ -59,6 +59,7 @@
       $("#btn-resume").click(function() {
         $("#content").removeClass("hidden");
         $("#content").load("asset/demo/resume.txt");
+        //handle error
         $(".content-title").html("My resume")
       });
       $("#btn-course").click(function() {
@@ -145,7 +146,7 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <h2>Contact Me</h2>
-          <form id="contactForm" name="contactForm"  action=javascript:void(0) onsubmit="return validateContactForm()">
+          <form id="contactForm" name="contactForm" action=javascript:void(0) onsubmit="return validateContactForm()">
             <div id="sname" class="form-group">
               <label for="senderName">Name</label>
               <input name="sname" type="text" class="form-control" id="senderName" placeholder="Name"><br/>
