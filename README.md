@@ -17,4 +17,16 @@ Repo showcasing demo for GIT version control, Bootstrap, Javascript training.
 ### Week 3: Javascript
 - [x] Extend your Bootstrap website to include a slider to show different visual effects (Refer to "keep_homepage_slider" branch)
 - [x] Create 2 local file, one to save your term 2 timetable, one showing your personal CV, use AJAX to get the content and display on a new page (Refer to "personal_info" branch)
+<<<<<<< HEAD
 - [x] Build a simple user registration form with validation, upon successful submission, pop out a successful message box (Refer to "personal_info" branch; implemented form validation in contact form instead of user registration)
+=======
+- [x] Build a contact form with validation, upon successful submission, pop out a successful message box (Refer to "personal_info" branch; implemented form validation in contact form instead of user registration)
+- [ ] Build a simple user registration form with validation, upon successful submission, pop out a successful message box 
+
+### Week 4: SQL
+- [ ] Design a database with tables to store user registration information similar to https://services.veriguide.org/veriguide/register.jsp?service=BASIC
+- [ ] Complete the user registration form and save the data in MySQL database
+- [ ] Display all registred users data in a table
+
+
+>>>>>>> origin/signup_page
