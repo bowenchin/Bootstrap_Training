@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/signup.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
 </head>
 
 <!-- Nav bar -->
@@ -44,11 +45,12 @@
 </nav>
 
 <body>
-  <script>
-    function validateSignUp() {
-      var name = document.forms["contactForm"]["sname"].value;
-      var email = document.forms["contactForm"]["semail"].value;
-      var msg = document.forms["contactForm"]["smsg"].value;
+
+ <script>
+   /*function validate() {
+      var name = document.forms["signUpForm"]["sal"].value;
+      var email = document.forms["signUpForm"]["semail"].value;
+      var msg = document.forms["signUpForm"]["smsg"].value;
 
       var bool = true;
 
@@ -90,7 +92,7 @@
 
         return true;
       }
-    }
+    } */
 
     function resetForm() {
       document.getElementById("signUpForm").reset();
@@ -102,29 +104,148 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <h2>Sign Up</h2>
-          <form id="signUpForm" name="contactForm" action=javascript:void(0) onsubmit="return validateSignUp()">
-            <div id="sname " class="form-group ">
-              <label for="senderName">Name</label>
-              <input name="sname " type="text " class="form-control " id="senderName " placeholder="Name "><br/>
-              <div id="alert-name " class="alert alert-danger alert-name hide "><strong>Alert: </strong>Please fill in your name...</div>
-            </div>
-            <div id="semail " class="form-group ">
-              <label for="senderEmail">Email address</label>
-              <input name="semail" type="email " class="form-control " id="senderEmail " placeholder="Email "><br/>
-              <div id="alert-email" class="alert alert-danger hide "><strong>Alert: </strong>Please fill in your email...</div>
-            </div>
-            <div id="smessage " class="form-group ">
-              <label for="senderMessage ">Message</label>
-              <textarea name="smsg" type="text " class="form-control " rows="3 " id="senderMessage " placeholder="Message "></textarea><br/>
-              <div id="alert-msg" class="alert alert-danger hide "><strong>Alert: </strong>Please fill in your message...</div>
+          <h2>Register for a new account</h2>
+          <form id="signUpForm" data-toggle="validator" role="form" name="signUpForm" action=javascript:void(0) onsubmit="return validate()">
+
+            <div id="personal-info" class="card">
+              <h3>Personal Information</h3>
+
+              <!-- Required! -->
+              <div id="sal" class="form-group required">
+                <label for="senderName" class="control-label">Salutation</label>
+                <select class="form-control" id="sel1" required>
+                  <option>Mr.</option>
+                  <option>Ms.</option>
+                  <option>Miss.</option>
+                  <option>Mrs.</option>
+                  <option>Prof.</option>
+                  <option>Dr.</option>
+                </select>
+                <div class="help-block">Select the appropriate salutation above</div>
+              </div>
+
+              <!-- Required! -->
+              <div id="sname" class="form-group required">
+                <label for="name" class="control-label">Given Name</label>
+                <input name="name" id="name" type="text" class="form-control" placeholder="Given name" data-error="Please fill in your given name..." required>
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <!-- Required! -->
+              <div id="sname" class="form-group required">
+                <label for="surname" class="control-label">Surname</label>
+                <input name="surname" type="text" class="form-control" id="senderName" placeholder="Surname" data-error="Please fill in your surname..." required>
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <!-- Required! -->
+              <div id="sname" class="form-group required">
+                <label for="affiliation" class="control-label">Affiliation Name</label>
+                <input name="affiliation" type="text" class="form-control" id="senderName" placeholder="Affiliation name" data-error="Please fill in your affiliation's name..." required>
+                <div class="help-block with-errors"></div>
+
+              </div>
+
+              <!-- Required! -->
+              <div id="sname" class="form-group required">
+                <label for="position" class="control-label">Job title/position</label>
+                <input name="position" type="text" class="form-control" id="senderName" placeholder="Title/position" data-error="Please fill in your title or position..." required>
+                <div class="help-block with-errors"></div>
+
+              </div>
             </div>
 
-            <button id="submit-btn" type="submit " class="btn btn-primary ">Sign Up</button>
+            <div id="account-info" class="card">
+              <h3>Account Information</h3>
+              <!-- Required! -->
+              <div class="form-group required">
+                <label class="control-label">Email Address</label>
+                <input name="semail" type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Please input a valid email..." required>
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <!-- Required! -->
+              <div class="form-group required">
+                <label class="control-label">Retype Email Address</label>
+                <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Retype email" data-match="#inputEmail" data-match-error="Whoops, this doesn't match with the above field" required>
+                <div class="help-block with-errors"></div>
+
+              </div>
+
+              <!-- Required! -->
+              <div class="form-group required">
+                <label class="control-label">Password</label>
+                <input id="inputPassword" type="password" class="form-control" placeholder="Password" data-minlength="6" required>
+                <div class="help-block">Minimum of 6 characters</div>
+              </div>
+
+              <!-- Required! -->
+              <div class="form-group required">
+                <label class="control-label">Retype Password</label>
+                <input id="password" type="password" class="form-control" placeholder="Confirm password" data-match="#inputPassword" data-match-error="Whoops, this doesn't match with the above field" required>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div id="contact-info" class="card">
+              <h3>Contact Information</h3>
+              <div class="form-group">
+                <label for="userPhone">Phone Number</label>
+                <input type="phoneNumber" class="form-control" id="userPhone" placeholder="Phone" data-error="Please fill in your phone number...">
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="userFax">Fax Number</label>
+                <input type="phoneNumber" class="form-control" id="userFax" placeholder="Fax">
+              </div>
+
+              <div class="form-group">
+                <label>Website</label>
+                <input type="text" class="form-control" id="senderEmail" placeholder="Website">
+                <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your website...</div>
+              </div>
+
+              <!-- Required! -->
+              <div class="form-group required">
+                <label class="control-label">Address</label>
+                <textarea row="3" type="text" class="form-control" id="senderEmail" placeholder="Address" data-error="Please fill in your address..." required></textarea>
+                <div class="help-block with-errors"></div>
+              </div>
+
+              <!-- Required! -->
+              <div class="form-group required">
+                <label class="control-label">City</label>
+                <input name="city" type="text" class="form-control" id="inputCity" placeholder="City" required>
+                <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your city...</div>
+              </div>
+
+              <div class="form-group">
+                <label>State/Province</label>
+                <input name="state" type="text" class="form-control" id="senderEmail" placeholder="State/Province">
+              </div>
+
+
+              <div id="semail" class="form-group">
+                <label>Zip/Postal Code</label>
+                <input name="zipCode" type="postalCode" class="form-control" id="senderEmail" placeholder="Postal code">
+                <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your postal code...</div>
+              </div>
+
+              <!-- Required! -->
+              <div id="inputCountry" class="form-group required">
+                <label for="country" class="control-label">Country</label>
+                <input type="text" class="form-control" id="inputCountry" placeholder="Region" data-error="Please fill in your country's name" required>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+
+            <button id="submit-btn" type="submit" class="btn btn-primary btn-lg center">Sign Up</button>
           </form><br/>
 
-          <div id="confirm-sent" class="alert alert-success hide ">
-              <strong>Success!</strong> Your account has been created.
+          <div id="confirm-sent" class="alert alert-success hide">
+            <strong>Success!</strong> Your message has been sent.
           </div>
 
         </div>
@@ -132,6 +253,7 @@
 
     </div>
   </div>
+
 </body>
 
 </html>

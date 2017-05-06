@@ -18,7 +18,7 @@ Repo showcasing demo for GIT version control, Bootstrap, Javascript training.
 ### Week 3: Javascript
 - [x] Extend your Bootstrap website to include a slider to show different visual effects (Refer to "keep_homepage_slider" branch)
 - [x] Create 2 local file, one to save your term 2 timetable, one showing your personal CV, use AJAX to get the content and display on a new page (Refer to "personal_info" branch)
-- [x] Build a contact form with validation, upon successful submission, pop out a successful message box (Refer to "personal_info" branch; implemented form validation in contact form instead of user registration)
+- [x] Build a contact form with validation, upon successful submission, pop out a successful message box (Refer to "personal_info" branch)
 - [x] Build a simple user registration form with validation, upon successful submission, pop out a successful message box (Refer to "signup_page" branch)
 
 ### Week 4: SQL
