@@ -2,6 +2,10 @@ body {
   background: #e2e1e0;
 }
 
+textarea{
+  max-width: 100%;
+}
+
 .btn-primary{
   background-color: #39ccb1;
   border-color: #39ccb1;
@@ -21,7 +25,7 @@ body {
 .card {
 background: #fff;
 margin-bottom: 10px;
-border-radius: 2px;
+border-radius: 4px;
 padding: 1rem;
 padding-top: 0.25px;
 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
