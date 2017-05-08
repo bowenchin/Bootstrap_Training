@@ -54,6 +54,9 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <h2>Register for a new account</h2>
+          <div id="required" class="form-group required">
+            <label for="required" class="control-label">Required field </label>
+          </div>
 
           <?php
             require('connect.php');
