@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -46,74 +48,22 @@
 
 <body>
 
- <script>
-   /*function validate() {
-      var name = document.forms["signUpForm"]["sal"].value;
-      var email = document.forms["signUpForm"]["semail"].value;
-      var msg = document.forms["signUpForm"]["smsg"].value;
-
-      var bool = true;
-
-      document.getElementById("confirm-sent").classList.add("hide");
-
-      if (name == "") {
-        document.getElementById("alert-name").classList.remove("hide");
-        document.getElementById("sname").classList.add("has-error");
-        bool = false;
-      }
-      if (email == "") {
-        document.getElementById("alert-email").classList.remove("hide");
-        document.getElementById("semail").classList.add("has-error");
-        bool = false;
-      }
-      if (msg == "") {
-        document.getElementById("alert-msg").classList.remove("hide");
-        document.getElementById("smessage").classList.add("has-error");
-        bool = false;
-      }
-      if (bool == false) {
-        //document.getElementById("submit-btn").classList.add("disabled");
-        return false;
-      } else if (bool) {
-        document.getElementById("confirm-sent").classList.remove("hide");
-
-        document.getElementById("submit-btn").classList.remove("disabled");
-
-
-        document.getElementById("alert-name").classList.add("hide");
-        document.getElementById("alert-email").classList.add("hide");
-        document.getElementById("alert-msg").classList.add("hide");
-
-        document.getElementById("sname").classList.remove("has-error");
-        document.getElementById("semail").classList.remove("has-error");
-        document.getElementById("smessage").classList.remove("has-error");
-
-        setTimeout("resetForm()", 2000); // set timout
-
-        return true;
-      }
-    } */
-
-    function resetForm() {
-      document.getElementById("signUpForm").reset();
-      document.getElementById("confirm-sent").classList.add("hide");
-    }
-  </script>
-
   <div id="form">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <h2>Register for a new account</h2>
-          <form id="signUpForm" data-toggle="validator" role="form" name="signUpForm" action=javascript:void(0) onsubmit="return validate()">
+          <form id="signUpForm" data-toggle="validator" role="form" name="signUpForm" method="POST">
 
+            <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+            <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
             <div id="personal-info" class="card">
               <h3>Personal Information</h3>
 
               <!-- Required! -->
               <div id="sal" class="form-group required">
-                <label for="senderName" class="control-label">Salutation</label>
-                <select class="form-control" id="sel1" required>
+                <label name="salutation" for="senderSal" class="control-label">Salutation</label>
+                <select class="form-control" id="selection_salutation" required>
                   <option>Mr.</option>
                   <option>Ms.</option>
                   <option>Miss.</option>
@@ -127,14 +77,14 @@
               <!-- Required! -->
               <div id="sname" class="form-group required">
                 <label for="name" class="control-label">Given Name</label>
-                <input name="name" id="name" type="text" class="form-control" placeholder="Given name" data-error="Please fill in your given name..." required>
+                <input name="first_name" id="name" type="text" class="form-control" placeholder="Given name" data-error="Please fill in your given name..." required>
                 <div class="help-block with-errors"></div>
               </div>
 
               <!-- Required! -->
               <div id="sname" class="form-group required">
                 <label for="surname" class="control-label">Surname</label>
-                <input name="surname" type="text" class="form-control" id="senderName" placeholder="Surname" data-error="Please fill in your surname..." required>
+                <input name="last_name" type="text" class="form-control" id="senderName" placeholder="Surname" data-error="Please fill in your surname..." required>
                 <div class="help-block with-errors"></div>
               </div>
 
@@ -159,23 +109,23 @@
               <h3>Account Information</h3>
               <!-- Required! -->
               <div class="form-group required">
-                <label class="control-label">Email Address</label>
-                <input name="semail" type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Please input a valid email..." required>
+                <label for="email" class="control-label">Email Address</label>
+                <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Please input a valid email..." required>
                 <div class="help-block with-errors"></div>
               </div>
 
               <!-- Required! -->
               <div class="form-group required">
                 <label class="control-label">Retype Email Address</label>
-                <input name="semail" type="email" class="form-control" id="senderEmail" placeholder="Retype email" data-match="#inputEmail" data-match-error="Whoops, this doesn't match with the above field" required>
+                <input type="email" class="form-control" id="senderEmail" placeholder="Retype email" data-match="#inputEmail" data-match-error="Whoops, this doesn't match with the above field" required>
                 <div class="help-block with-errors"></div>
 
               </div>
 
               <!-- Required! -->
               <div class="form-group required">
-                <label class="control-label">Password</label>
-                <input id="inputPassword" type="password" class="form-control" placeholder="Password" data-minlength="6" required>
+                <label for="password" class="control-label">Password</label>
+                <input name="password" id="inputPassword" type="password" class="form-control" placeholder="Password" data-minlength="6" required>
                 <div class="help-block">Minimum of 6 characters</div>
               </div>
 
@@ -192,25 +142,25 @@
               <h3>Contact Information</h3>
               <div class="form-group">
                 <label for="userPhone">Phone Number</label>
-                <input type="phoneNumber" class="form-control" id="userPhone" placeholder="Phone" data-error="Please fill in your phone number...">
+                <input name="phone_number" type="phoneNumber" class="form-control" id="userPhone" placeholder="Phone" data-error="Please fill in your phone number...">
                 <div class="help-block with-errors"></div>
               </div>
 
               <div class="form-group">
                 <label for="userFax">Fax Number</label>
-                <input type="phoneNumber" class="form-control" id="userFax" placeholder="Fax">
+                <input name="fax_number" type="phoneNumber" class="form-control" id="userFax" placeholder="Fax">
               </div>
 
               <div class="form-group">
                 <label>Website</label>
-                <input type="text" class="form-control" id="senderEmail" placeholder="Website">
+                <input name="website" type="text" class="form-control" id="senderEmail" placeholder="Website">
                 <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your website...</div>
               </div>
 
               <!-- Required! -->
               <div class="form-group required">
                 <label class="control-label">Address</label>
-                <textarea row="3" type="text" class="form-control" id="senderEmail" placeholder="Address" data-error="Please fill in your address..." required></textarea>
+                <textarea name="address" row="3" type="text" class="form-control" id="senderEmail" placeholder="Address" data-error="Please fill in your address..." required></textarea>
                 <div class="help-block with-errors"></div>
               </div>
 
@@ -229,13 +179,13 @@
 
               <div id="semail" class="form-group">
                 <label>Zip/Postal Code</label>
-                <input name="zipCode" type="postalCode" class="form-control" id="senderEmail" placeholder="Postal code">
+                <input name="postal" type="postalCode" class="form-control" id="senderEmail" placeholder="Postal code">
                 <div id="alert-email" class="alert alert-danger hide"><strong>Alert: </strong>Please fill in your postal code...</div>
               </div>
 
               <!-- Required! -->
               <div id="inputCountry" class="form-group required">
-                <label for="country" class="control-label">Country</label>
+                <label name="region" for="country" class="control-label">Country</label>
                 <input type="text" class="form-control" id="inputCountry" placeholder="Region" data-error="Please fill in your country's name" required>
                 <div class="help-block with-errors"></div>
               </div>
@@ -243,6 +193,39 @@
 
             <button id="submit-btn" type="submit" class="btn btn-primary btn-lg center">Sign Up</button>
           </form><br/>
+
+          <?php
+          	require('connect.php');
+            //print_r($_POST);
+              // If the values are posted, insert them into the database.
+              if (isset($_POST['email']) && isset($_POST['password']) ){
+                  $salutation = $_POST['salutation'];
+                  $first_name = $_POST['first_name'];
+                  $last_name = $_POST['last_name'];
+                  $affiliation = $_POST['affiliation'];
+                  $position = $_POST['position'];
+                  $email = $_POST['email'];
+                  $password = $_POST['password'];
+                  $phone_number = $_POST['phone_number'];
+                  $fax_number = $_POST['fax_number'];
+                  $website = $_POST['website'];
+                  $address = $_POST['address'];
+                  $city = $_POST['city'];
+                  $state = $_POST['state'];
+                  $postal = $_POST['postal'];
+                  $region = $_POST['region'];
+                  
+//TODO FIX BUG: Undefined index on region and salutation
+
+                  $query = "INSERT INTO `login` (salutation, first_name, last_name, affiliation, position, email, password, phone_number, fax_number, website, address, city, state, postal, region) VALUES ('$salutation', '$first_name', '$last_name', '$affiliation', '$position','$email','$password','$phone_number','$fax_number','$website','$address','$city','$state','$postal','$region')";
+                  $result = mysqli_query($connection, $query);
+                  if($result){
+                      $smsg = "User Created Successfully.";
+                  }else{
+                      $fmsg ="User Registration Failed";
+                  }
+              }
+          ?>
 
           <div id="confirm-sent" class="alert alert-success hide">
             <strong>Success!</strong> Your message has been sent.
