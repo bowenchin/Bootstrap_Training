@@ -12,7 +12,7 @@ Repo showcasing demo for GIT version control, Bootstrap, Javascript training.
 
 ### Week 2: Bootstrap
 - [x] Install Bootstrap into your personal repository
-- [x] Build a Boostrap page that resembles the basic template (Refer to "bootstrap_demo" branch)
+- [x] Build a Bootstrap page that resembles the basic template (Refer to "bootstrap_demo" branch)
 - [x] Re-build the keep.edu.hk homepage using Bootstrap (Refer to "keep_homepage" branch)
 
 ### Week 3: Javascript
@@ -22,6 +22,6 @@ Repo showcasing demo for GIT version control, Bootstrap, Javascript training.
 - [x] Build a simple user registration form with validation, upon successful submission, pop out a successful message box (Refer to "signup_page" branch)
 
 ### Week 4: SQL
-- [ ] Design a database with tables to store user registration information similar to https://services.veriguide.org/veriguide/register.jsp?service=BASIC
-- [ ] Complete the user registration form and save the data in MySQL database
-- [ ] Display all registered users data in a table
+- [x] Design a database with tables to store user registration information similar to https://services.veriguide.org/veriguide/register.jsp?service=BASIC
+- [x] Complete the user registration form and save the data in MySQL database
+- [ ] Display all registered users data in a table (you could use Datatable - https://datatables.net/ )
