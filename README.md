@@ -24,4 +24,5 @@ Repo showcasing demo for GIT version control, Bootstrap, Javascript training.
 ### Week 4: SQL
 - [x] Design a database with tables to store user registration information similar to https://services.veriguide.org/veriguide/register.jsp?service=BASIC
 - [x] Complete the user registration form and save the data in MySQL database
-- [ ] Display all registered users data in a table (you could use DataTable - https://datatables.net/ )
+- [x] Display all registered users data in a table (you could use DataTable - https://datatables.net/ )
+- Refer to signup_page branch for above deliverables
