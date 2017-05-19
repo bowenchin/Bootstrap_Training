@@ -26,3 +26,7 @@ Repo showcasing demo for GIT version control, Bootstrap, Javascript training.
 - [x] Complete the user registration form and save the data in MySQL database
 - [x] Display all registered users data in a table (you could use DataTable - https://datatables.net/ )
 - Refer to signup_page branch for above deliverables
+
+### Week 5: MVC
+- [x] Complete a tutorial for MVC and be able to explain it in a simple way to someone else
+- [x] Display a very simple HTML page saying “Hello, World” using that framework (Refer to "mvc-test" branch)
